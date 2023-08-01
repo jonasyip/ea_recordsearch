@@ -1,5 +1,5 @@
 # earecordsearch
-EA record searcher
+A Python package that searches for observed property values in the Environment Agency Hydrology dataset.
 
 
 ## Examples
