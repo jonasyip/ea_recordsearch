@@ -2,10 +2,19 @@
 A Python package that searches for observed property values in the Environment Agency Hydrology dataset.
 
 
-## Examples
+## Installation 
+
+Clone this repository into a directory on your computer. Navigate to that directory and run: 
+
+```
+pip install .
+```
+
+You can now import the package as normal, e.g., `import earecordsearch`.
+
+## Example of use
 ```python
 from earecordsearch.searcher import EARecordSearch
-
 search = EARecordSearch("Osney Lock")
 
 search.get_station_parameters()
