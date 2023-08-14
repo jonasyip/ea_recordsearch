@@ -365,5 +365,5 @@ class EARecordSearch:
         closest_index = (search_datetimes - target_datetime).abs().idxmin()
         # Print difference in time, in minutes, between target and closest
         time_diff = (search_datetimes[closest_index] - target_datetime).total_seconds() / 60
-        print("Time difference to closest record: %.2f minutes" % time_diff)
+        # print("Time difference to closest record: %.2f minutes" % time_diff)
         return pd.DataFrame(df_record.loc[closest_index]).transpose()
