@@ -1,1 +1,1 @@
-from . import searcher
+from . import search

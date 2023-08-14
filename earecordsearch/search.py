@@ -317,6 +317,23 @@ class EARecordSearch:
         else:
             raise Exception("Request failed. Status code {0} with message {1}".format(r.status_code, r.json()))
         
+    def get_parameter_data(self) -> pd.DataFrame:
+        """
+        Returns a station's record data of a given property; parameters are set by set_parameter().
+
+        Returns
+        -------
+        fetched_data : pd.DataFrame
+            Returns fetched data from set_parameter(). 
+        
+        """
+
+
+        if self._fetched_data is None:
+            raise ValueError("Data was not fetched, set_parameter() first.")
+        
+        return self._fetched_data
+
     
     def find_closest_record(self, date : str, time : str) -> pd.DataFrame:
         """
