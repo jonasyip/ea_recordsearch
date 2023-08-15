@@ -15,7 +15,8 @@ You can now import the package as normal, e.g., `import earecordsearch`.
 ## Example of use
 ```python
 from earecordsearch.searcher import EARecordSearch
-search = EARecordSearch("Osney Lock")
+stationName = "Osney Lock"
+search = EARecordSearch(stationName)
 
 search.get_station_parameters()
 
@@ -26,3 +27,12 @@ search.find_closest_record(dateTime="2023-05-15T12:15")
 ```
 
 To install, do `pip install .`
+
+## Observed property list
+```python
+{waterFlow|waterLevel|rainfall|groundwaterLevel|dissolved-oxygen|fdom|bga|turbidity|chlorophyll|conductivity|temperature|ammonium|nitrate|ph}
+```
+## periodName
+```python
+{15min|daily|sub-daily}
+```
