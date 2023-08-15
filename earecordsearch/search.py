@@ -335,7 +335,7 @@ class EARecordSearch:
         return self._fetched_data
 
     
-    def find_closest_record(self, date : str, time : str) -> pd.DataFrame:
+    def find_closest_record(self, date: str = None, time : str = None, dateTime : str = None) -> pd.DataFrame:
         """
         Find's the closest measurement record for a stated date and time.
 
@@ -347,6 +347,10 @@ class EARecordSearch:
         time : string
             Search time in the format of "hh:mm" or "hh:mm:ss".
 
+        dateTime : string
+            ISO8601 dateTime format.
+            * "YYYY-mm-ddTHH:MM:SS" i.e "2023-07-07T12:00:00".
+
         Returns
         -------
         df_record : pd.DataFrame
@@ -357,7 +361,12 @@ class EARecordSearch:
         if self._fetched_data is None:
             raise ValueError("Data was not fetched, set_parameter() first.")
 
-        target_datetime = pd.to_datetime("%sT%s" % (date, time)) #ISO 8601
+        if dateTime is not None:
+            target_datetime = pd.to_datetime(dateTime)
+        elif date is not None and time is not None:
+            target_datetime = pd.to_datetime("%sT%s" % (date, time)) #ISO 8601
+        else:
+            raise ValueError("Provide either date and time or dateTime.")
 
         df_record = self._fetched_data
 

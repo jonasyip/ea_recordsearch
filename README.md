@@ -21,6 +21,8 @@ search.get_station_parameters()
 
 search.set_parameter(observed_property="rainfall")
 search.find_closest_record("2023-05-15", "12:15")
+#or
+search.find_closest_record(dateTime="2023-05-15T12:15")
 ```
 
 To install, do `pip install .`
