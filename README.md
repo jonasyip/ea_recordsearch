@@ -21,11 +21,15 @@ search = EARecordSearch(stationName)
 station_parameters = search.get_station_parameters()
 print(station_parameters)
 
-search.set_parameter(observed_property="rainfall")
+search.set_parameter(observed_property="rainfall", min_date="2023-07-08", max_date="2023-08-07")
 record = search.find_closest_record("2023-05-15", "12:15")
 #or
 record = search.find_closest_record(dateTime="2023-05-15T12:15")
 print(record)
+
+data = search.get_parameter_data()
+print(data)
+
 ```
 
 To install, do `pip install .`
