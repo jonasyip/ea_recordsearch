@@ -1,5 +1,5 @@
-# earecordsearch
-A Python package that searches for observed property values in the Environment Agency Hydrology dataset.
+# ea_recordsearch
+A Python package that fetches Hydrology data from the Environment Agency Hydrology Data Explorer (https://environment.data.gov.uk/hydrology/explore).
 
 
 ## Installation 
