@@ -18,12 +18,14 @@ from earecordsearch.searcher import EARecordSearch
 stationName = "Osney Lock"
 search = EARecordSearch(stationName)
 
-search.get_station_parameters()
+station_parameters = search.get_station_parameters()
+print(station_parameters)
 
 search.set_parameter(observed_property="rainfall")
-search.find_closest_record("2023-05-15", "12:15")
+record = search.find_closest_record("2023-05-15", "12:15")
 #or
-search.find_closest_record(dateTime="2023-05-15T12:15")
+record = search.find_closest_record(dateTime="2023-05-15T12:15")
+print(record)
 ```
 
 To install, do `pip install .`
