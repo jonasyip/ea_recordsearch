@@ -1,5 +1,5 @@
 # ea_recordsearch
-A Python package that fetches Hydrology data from the Environment Agency Hydrology Data Explorer (https://environment.data.gov.uk/hydrology/explore).
+A Python package that fetches hydrology data from the Environment Agency Hydrology Data Explorer (https://environment.data.gov.uk/hydrology/explore).
 
 
 ## Installation 
@@ -28,11 +28,11 @@ search.find_closest_record(dateTime="2023-05-15T12:15")
 
 To install, do `pip install .`
 
-## Observed property list
+### Observed property list
 ```python
 {waterFlow|waterLevel|rainfall|groundwaterLevel|dissolved-oxygen|fdom|bga|turbidity|chlorophyll|conductivity|temperature|ammonium|nitrate|ph}
 ```
-## periodName
+### periodName
 ```python
 {15min|daily|sub-daily}
 ```
