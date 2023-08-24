@@ -10,7 +10,7 @@ Clone this repository into a directory on your computer. Navigate to that direct
 pip install .
 ```
 
-You can now import the package as normal, e.g., `import earecordsearch`.
+You can now import the package as normal, e.g., `from earecordsearch.searcher import EARecordSearch`.
 
 ## Example of use
 ```python
